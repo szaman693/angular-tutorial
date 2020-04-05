@@ -12,7 +12,7 @@ export class HeroesComponent implements OnInit {
 
   heros: Hero[];
 
-  selectedHero: Hero;
+  // selectedHero: Hero;
 
   constructor(private heroService: HeroService, private messageService: MessageService) { }
 
@@ -20,10 +20,10 @@ export class HeroesComponent implements OnInit {
     this.getHeroes();
   }
 
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-    this.messageService.add('2Hero Service: Selected hero id=' + hero.id + ' name=' + hero.name);
-  }
+  // onSelect(hero: Hero): void {
+  //   this.selectedHero = hero;
+  //   this.messageService.add('2Hero Service: Selected hero id=' + hero.id + ' name=' + hero.name);
+  // }
 
   getHeroes(): void {
     this.heroService.getHeroes().subscribe(h => this.heros = h);
